@@ -1,0 +1,147 @@
+/*variables*/
+
+:root {
+    /*custom colors*/
+    --color-custom-orange: hsl(31, 77%, 52%);
+    --color-custom-cyan: hsl(184, 100%, 22%);
+    --color-custom-cyan-dark: hsl(179, 100%, 13%);
+    --color-bg-light: hsl(0, 0%, 95%);
+    --color-paragraph: hsla(0, 0%, 100%, 0.75);
+    --color-heading: hsla(0, 0%, 95%);
+
+    /*fonts*/
+    --font-paragraph: "Lexend Deca", sans-serif;
+    --font-heading: "Big Shoulders Display", sans-serif;
+}
+
+
+/*basic styling and layout*/
+
+html {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+#wrapper {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--space-md);
+}
+
+body {
+    background-color: var(--color-bg-light);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-family: var(--font-paragraph);
+    font-weight: 400;
+    color: var(--color-paragraph);
+}
+
+
+/*grid*/
+
+.grid {
+    display: grid;
+    margin: 20px;
+}
+
+
+/*card*/
+
+.card {
+    max-width: 320px;
+    padding: 40px;
+}
+
+.card--orange {
+    background-color: var(--color-custom-orange);
+    border-radius: 3% 3% 0 0;
+}
+
+.card--cyan {
+    background-color: var(--color-custom-cyan);
+}
+
+.card--cyan-dark {
+    background-color: var(--color-custom-cyan-dark);
+    border-radius: 0 0 3% 3%;
+}
+
+.card__image {
+    display: block;
+}
+
+.card__headline {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-heading);
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.card__description {
+    margin: 20px 0;
+}
+
+
+/*button*/
+
+.button {
+    background-color: var(--color-bg-light);
+    border: none;
+    border-radius: 28px;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    padding: 0px 20px;
+    margin: 10px 0;
+}
+
+.button__text {
+    padding: 0 5px;
+}
+
+.button__text--orange {
+    color: var(--color-custom-orange);
+}
+
+.button__text--cyan {
+    color: var(--color-custom-cyan);
+}
+
+.button__text--cyan-dark {
+    color: var(--color-custom-cyan-dark);
+}
+
+
+/*media*/
+
+@media (min-width: 1440px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card--orange {
+        border-radius: 3% 0 0 3%;
+    }
+
+    .card--cyan-dark {
+        border-radius: 0 3% 3% 0;
+    }
+}
